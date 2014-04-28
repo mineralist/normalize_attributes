@@ -47,7 +47,6 @@ module NormalizeAttributes
 
       def apply_normalizers(name, normalizers, options)
         if options[:raw] && respond_to?("#{name}_before_type_cast")
-          logger.debug "before type cast"
           value = send("#{name}_before_type_cast")
         else
           value = send(name)
