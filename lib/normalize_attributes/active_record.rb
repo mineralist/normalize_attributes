@@ -71,7 +71,7 @@ module NormalizeAttributes
           end
         end
 
-        # write_attribute name, value
+        write_attribute(name, value) if options[:write]
       end
     end
   end
